@@ -253,7 +253,7 @@ class CommandToken {
                 list.outputCases();
                 break;
             case FILTER:
-                list.filter(true);
+                list.filter(false);
                 break;
             case ADD:
                 list.addCase(new Case((String)args.get(0), (Calendar) args.get(1)));
