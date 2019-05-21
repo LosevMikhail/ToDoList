@@ -221,6 +221,9 @@ class CommandToken {
                             System.out.println("The file is empty\t ¯\\_(ツ)_/¯");
                         }
                     }
+                    catch (OutOfMemoryError error) { // handle situation when the file is too big
+                        System.out.println("Failed loading: the file is too big. If you want to process it, start the JVM with a larger heap.\n");
+                    }
                 } else {
                     System.out.println("Invalid command. Type 'help' for commands...");
                 }
